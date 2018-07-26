@@ -8,6 +8,7 @@ public class MadisonController : MonoBehaviour {
     bool facingRight = true;
     Rigidbody2D body;
     public bool canMove;
+    public Animator anim;
 
     void Start()
     {
@@ -16,6 +17,8 @@ public class MadisonController : MonoBehaviour {
 
     void FixedUpdate()
     {
+        anim.SetFloat("Velocity", Mathf.Abs(body.velocity.x));
+
         if (!canMove)
         {
             body.velocity = Vector3.zero;
@@ -34,6 +37,7 @@ public class MadisonController : MonoBehaviour {
         {
             Flip();
         }
+
     }
 
     void Flip()

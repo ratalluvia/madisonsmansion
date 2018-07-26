@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -32,6 +33,19 @@ public class PlayerInteraction : MonoBehaviour {
 
     private void Update()
     {
+        if((gs.visionLevel + 1) <= visionPoints.visionPoints / 100)
+        {
+            Debug.Log("Load Vision");
+            gs.visionLevel += 1;
+            sc.FadeToLevel("VisionScene");
+        }
+
+        if (Input.GetAxisRaw("Cancel") != 0)
+        {
+            Debug.Log("Quit!");
+            Application.Quit();
+        }
+
         if (Input.GetAxisRaw("Submit") > 0)
         {
             if(submit_pressed == false)
@@ -81,6 +95,7 @@ public class PlayerInteraction : MonoBehaviour {
             if (m_interactable.doorway)
             {
                 Debug.Log("Doorway");
+                gs.currentScene = m_interactable.nextScene;
                 sc.FadeToLevel(m_interactable.nextScene);
             }
 

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 312dda18046b8d342afc52aceb0695f6
+  - enabled: 1
     path: Assets/Scenes/Opening.unity
     guid: 5a1a7fe17b78d87479eacc18bd199e9f
   - enabled: 1
@@ -23,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hunting_Room.unity
     guid: 0ee31159468dae94dad66f7192536ab2
+  - enabled: 1
+    path: Assets/Scenes/VisionScene.unity
+    guid: 182bbcbafc5c1f24db90e6b0f34dde8d
   m_configObjects: {}
