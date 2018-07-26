@@ -585,6 +585,11 @@ Prefab:
       propertyPath: sc
       value: 
       objectReference: {fileID: 772392629}
+    - target: {fileID: 114823569350477064, guid: 19b83e10b77ac1543bcd900f7e001590,
+        type: 2}
+      propertyPath: v_text
+      value: 
+      objectReference: {fileID: 392663008}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19b83e10b77ac1543bcd900f7e001590, type: 2}
   m_IsPrefabAsset: 0

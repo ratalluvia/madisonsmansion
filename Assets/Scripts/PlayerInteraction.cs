@@ -70,41 +70,57 @@ public class PlayerInteraction : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        float submit = Input.GetAxisRaw("Submit");
-        if (submit > 0 && !submit_pressed && collision.CompareTag("Interactable"))
+        if (collision.CompareTag("Interactable"))
         {
             GameObject item = collision.gameObject;
             m_interactable = item.GetComponent<Interactable>();
 
-            if (!m_interactable.used && !s_textBoxManager.textBox.enabled && m_interactable.visionPoints)
+            if (!i_canvas.enabled)
             {
-                m_interactable.used = true;
-                visionPoints.AddVisionPoints(item.name);
-                s_textBoxManager.theText.text = m_interactable.onUseMessage.text;
-                s_textBoxManager.EnableTextBox();
-                submit_pressed = true;
+                i_canvas.enabled = true;
+                i_text.text = m_interactable.message;
             }
 
-            else if(!s_textBoxManager.textBox.enabled && m_interactable.visionPoints)
-            {
-                s_textBoxManager.theText.text = m_interactable.onReuseMessage.text;
-                s_textBoxManager.EnableTextBox();
-                submit_pressed = true;
-            }
+            float submit = Input.GetAxisRaw("Submit");
 
-            if (m_interactable.doorway)
+            if (submit > 0 && !submit_pressed)
             {
-                Debug.Log("Doorway");
-                gs.currentScene = m_interactable.nextScene;
-                sc.FadeToLevel(m_interactable.nextScene);
-            }
 
-            if (m_interactable.soundSource)
-            {
-                Debug.Log("Sound Source");
-                mixer.SetFloat("MusicVolume", -80.0f);
-                music = item.GetComponent<AudioSource>();
-                music.PlayDelayed(0.5f);
+                if (!m_interactable.used && !s_textBoxManager.textBox.enabled && m_interactable.visionPoints)
+                {
+                    m_interactable.used = true;
+                    visionPoints.AddVisionPoints(item.name);
+                    s_textBoxManager.theText.text = m_interactable.onUseMessage.text;
+                    s_textBoxManager.EnableTextBox();
+                    submit_pressed = true;
+
+                    if (m_interactable.lockbox)
+                    {
+                        if (gs.CheckLockbox(item.name)) sc.FadeToLevel(item.name);
+                    }
+                }
+
+                else if (!s_textBoxManager.textBox.enabled && m_interactable.visionPoints)
+                {
+                    s_textBoxManager.theText.text = m_interactable.onReuseMessage.text;
+                    s_textBoxManager.EnableTextBox();
+                    submit_pressed = true;
+                }
+
+                if (m_interactable.doorway)
+                {
+                    Debug.Log("Doorway");
+                    gs.currentScene = m_interactable.nextScene;
+                    sc.FadeToLevel(m_interactable.nextScene);
+                }
+
+                if (m_interactable.soundSource)
+                {
+                    Debug.Log("Sound Source");
+                    mixer.SetFloat("MusicVolume", -80.0f);
+                    music = item.GetComponent<AudioSource>();
+                    music.PlayDelayed(0.5f);
+                }
             }
         }
     }

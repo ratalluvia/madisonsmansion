@@ -10,6 +10,8 @@ public class Interactable : MonoBehaviour {
     public bool doorway;
     public bool soundSource;
 
+    public bool lockbox;
+
     public string message;
 
     public TextAsset onUseMessage;
