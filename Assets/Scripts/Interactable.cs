@@ -14,9 +14,9 @@ public class Interactable : MonoBehaviour {
 
     public string message;
 
-    public TextAsset onUseMessage;
+    public string onUseMessage;
 
-    public TextAsset onReuseMessage;
+    public string onReuseMessage;
 
     public string nextScene;
 

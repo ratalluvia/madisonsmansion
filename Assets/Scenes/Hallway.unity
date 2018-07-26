@@ -655,9 +655,11 @@ MonoBehaviour:
   visionPoints: 1
   doorway: 0
   soundSource: 0
+  lockbox: 0
   message: Ponder painting
-  onUseMessage: {fileID: 4900000, guid: 2f65f9f0854b2dd48b43b632601ce0e9, type: 3}
-  onReuseMessage: {fileID: 4900000, guid: af8500acf25ce49479c9e3abe556ea55, type: 3}
+  onUseMessage: You painted this for your grandmother when you were a little girl.
+    She didn't like if very much.
+  onReuseMessage: It's a pretty stupid painting.
   nextScene: 
 --- !u!1001 &751568788
 Prefab:
@@ -830,9 +832,10 @@ MonoBehaviour:
   visionPoints: 0
   doorway: 1
   soundSource: 0
+  lockbox: 0
   message: Enter Hunting Room
-  onUseMessage: {fileID: 0}
-  onReuseMessage: {fileID: 0}
+  onUseMessage: .
+  onReuseMessage: 2
   nextScene: Hunting_Room
 --- !u!212 &778136197
 SpriteRenderer:
@@ -1088,9 +1091,10 @@ MonoBehaviour:
   visionPoints: 0
   doorway: 1
   soundSource: 0
+  lockbox: 0
   message: Go downstairs
-  onUseMessage: {fileID: 0}
-  onReuseMessage: {fileID: 0}
+  onUseMessage: .
+  onReuseMessage: 2
   nextScene: Entryway
 --- !u!70 &1118165669
 CapsuleCollider2D:
@@ -1214,9 +1218,10 @@ MonoBehaviour:
   visionPoints: 0
   doorway: 1
   soundSource: 0
+  lockbox: 0
   message: Enter Grandma's Room
-  onUseMessage: {fileID: 0}
-  onReuseMessage: {fileID: 0}
+  onUseMessage: .
+  onReuseMessage: 2
   nextScene: GrandmasRoom
 --- !u!212 &1195610993
 SpriteRenderer:
@@ -1467,9 +1472,11 @@ MonoBehaviour:
   visionPoints: 1
   doorway: 0
   soundSource: 1
+  lockbox: 0
   message: Check the time
-  onUseMessage: {fileID: 4900000, guid: eea093a18315b324ba2948c37ff71b3c, type: 3}
-  onReuseMessage: {fileID: 4900000, guid: 3e65427e17e9b924d948fc5195aff701, type: 3}
+  onUseMessage: This clock has taunted you since you were a child. Your grandmother
+    used to point to it and chastise you for wasting so much time.
+  onReuseMessage: Ironically, you don't have time to check the clock again.
   nextScene: 
 --- !u!61 &1558284035
 BoxCollider2D:

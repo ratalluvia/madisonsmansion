@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VisionScene.unity
     guid: 182bbcbafc5c1f24db90e6b0f34dde8d
+  - enabled: 1
+    path: Assets/Scenes/Piano.unity
+    guid: d44c72315b16ed54d956d499bc71a9d4
   m_configObjects: {}

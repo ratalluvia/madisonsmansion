@@ -90,7 +90,7 @@ public class PlayerInteraction : MonoBehaviour {
                 {
                     m_interactable.used = true;
                     visionPoints.AddVisionPoints(item.name);
-                    s_textBoxManager.theText.text = m_interactable.onUseMessage.text;
+                    s_textBoxManager.theText.text = m_interactable.onUseMessage;
                     s_textBoxManager.EnableTextBox();
                     submit_pressed = true;
 
@@ -102,7 +102,7 @@ public class PlayerInteraction : MonoBehaviour {
 
                 else if (!s_textBoxManager.textBox.enabled && m_interactable.visionPoints)
                 {
-                    s_textBoxManager.theText.text = m_interactable.onReuseMessage.text;
+                    s_textBoxManager.theText.text = m_interactable.onReuseMessage;
                     s_textBoxManager.EnableTextBox();
                     submit_pressed = true;
                 }
@@ -150,10 +150,5 @@ public class PlayerInteraction : MonoBehaviour {
             i_text.text = "";
             i_canvas.enabled = false;
         }
-    }
-
-    private void FadeScene()
-    {
-
     }
 }

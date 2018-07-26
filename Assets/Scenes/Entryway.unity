@@ -291,8 +291,8 @@ MonoBehaviour:
   soundSource: 0
   lockbox: 0
   message: Enter door
-  onUseMessage: {fileID: 0}
-  onReuseMessage: {fileID: 0}
+  onUseMessage: 0
+  onReuseMessage: 4
   nextScene: 
 --- !u!70 &289857500
 CapsuleCollider2D:
@@ -643,8 +643,9 @@ MonoBehaviour:
   soundSource: 1
   lockbox: 1
   message: Play piano
-  onUseMessage: {fileID: 4900000, guid: 82b661cb1b5ed7b4d9c3fcfd61174619, type: 3}
-  onReuseMessage: {fileID: 4900000, guid: 20c07610c782ca745b4197ac639735b9, type: 3}
+  onUseMessage: You play the song you wrote for your grandmother's funeral. It brings
+    back painful memories.
+  onReuseMessage: You played the piano all ready.
   nextScene: 
 --- !u!82 &1048090509
 AudioSource:
@@ -952,8 +953,8 @@ MonoBehaviour:
   soundSource: 0
   lockbox: 0
   message: Go up stairs
-  onUseMessage: {fileID: 0}
-  onReuseMessage: {fileID: 0}
+  onUseMessage: 0
+  onReuseMessage: 4
   nextScene: Hallway
 --- !u!114 &1364264714 stripped
 MonoBehaviour:
@@ -1120,8 +1121,8 @@ MonoBehaviour:
   soundSource: 0
   lockbox: 0
   message: Enter door
-  onUseMessage: {fileID: 4900000, guid: 4ac450786dbc9b34998f8a1446b30607, type: 3}
-  onReuseMessage: {fileID: 4900000, guid: 4ac450786dbc9b34998f8a1446b30607, type: 3}
+  onUseMessage: 0
+  onReuseMessage: 8
   nextScene: 
 --- !u!70 &1806519668
 CapsuleCollider2D:
@@ -1293,8 +1294,9 @@ MonoBehaviour:
   soundSource: 0
   lockbox: 0
   message: Read Book
-  onUseMessage: {fileID: 4900000, guid: 4ac450786dbc9b34998f8a1446b30607, type: 3}
-  onReuseMessage: {fileID: 4900000, guid: 8fb8e6b2440a80949b23c906f79e9f3a, type: 3}
+  onUseMessage: You read the book, and remember when your grandmother used to read
+    it to you.
+  onReuseMessage: You read this book already;
   nextScene: 
 --- !u!1001 &1844028114
 Prefab:
